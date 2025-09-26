@@ -4,17 +4,16 @@ import { Menu } from 'lucide-react'
 import Button from './ui/Button'
 import StudySidebarNavigation from './StudySidebarNavigation'
 import StudyMobileNavigation from './StudyMobileNavigation'
-import { Sheet, SheetContent, SheetTrigger } from './ui/Sheet'
 
 const StudySphereLayout = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 p-2 sm:p-4 md:p-8">
-      {/* Glassmorphic container */}
-      <div className="w-full max-w-7xl mx-auto backdrop-blur-xl bg-white/30 border-4 border-black rounded-3xl shadow-brutal overflow-hidden">
+    <div className="h-screen w-screen bg-gradient-to-br from-purple-50 to-blue-50 overflow-hidden">
+      {/* Glassmorphic container - Full Screen */}
+      <div className="h-full w-full backdrop-blur-xl bg-white/30 border-4 border-black m-2 rounded-3xl shadow-brutal flex flex-col">
         {/* Header */}
-        <header className="border-b-4 border-black p-4 sm:p-6 bg-white/40 backdrop-blur-md">
+        <header className="border-b-4 border-black p-4 sm:p-6 bg-white/40 backdrop-blur-md flex-shrink-0">
           <div className="flex justify-between items-center gap-4">
             <div className="flex items-center gap-4">
               <h1 className="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight text-black">
@@ -66,15 +65,18 @@ const StudySphereLayout = () => {
           </div>
         </header>
 
-        <div className="grid md:grid-cols-[280px_1fr] h-[calc(100vh-6rem)]">
+        {/* Main content area - Full height remaining */}
+        <div className="flex-1 grid md:grid-cols-[280px_1fr] overflow-hidden">
           {/* Sidebar - Desktop only */}
-          <div className="hidden md:block">
+          <div className="hidden md:block h-full overflow-hidden">
             <StudySidebarNavigation />
           </div>
 
-          {/* Main content */}
-          <div className="overflow-auto p-4 sm:p-6 bg-white/20">
-            <Outlet />
+          {/* Main content - Full height with own scroll */}
+          <div className="h-full bg-white/20 overflow-auto">
+            <div className="p-4 sm:p-6">
+              <Outlet />
+            </div>
           </div>
         </div>
       </div>
