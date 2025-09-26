@@ -70,8 +70,8 @@ module.exports = {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        mono: ['JetBrains Mono', 'monospace'],
+        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans-serif'],
+        mono: ['JetBrains Mono', '"Fira Code"', '"Cascadia Code"', 'Consolas', '"Liberation Mono"', '"Courier New"', 'monospace'],
       },
       fontSize: {
         'xs': ['0.75rem', { lineHeight: '1rem' }],
@@ -112,6 +112,9 @@ module.exports = {
       boxShadow: {
         'soft': '0 1px 3px rgba(0, 0, 0, 0.1)',
         'elevated': '0 10px 25px rgba(0, 0, 0, 0.15)',
+        'brutal': '8px 8px 0px 0px rgba(0,0,0,1)',
+        'brutal-sm': '4px 4px 0px 0px rgba(0,0,0,1)',
+        'brutal-lg': '12px 12px 0px 0px rgba(0,0,0,1)',
       },
       transitionTimingFunction: {
         'micro': 'cubic-bezier(0.4, 0, 0.2, 1)',
