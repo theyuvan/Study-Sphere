@@ -37,12 +37,12 @@ class ErrorBoundary extends React.Component {
             <div className="flex justify-center items-center mt-6">
               <button
                 onClick={() => {
-                  window.location.href = "/";
+                  window.location.reload();
                 }}
-                className="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded flex items-center gap-2 transition-colors duration-200 shadow-sm"
+                className="bg-black hover:bg-black/80 text-white font-bold py-2 px-4 rounded-xl flex items-center gap-2 transition-colors duration-200 shadow-brutal border-2 border-black"
               >
-                <Icon name="ArrowLeft" size={18} color="#fff" />
-                Back
+                <Icon name="RotateCcw" size={18} color="#fff" />
+                Reload Page
               </button>
             </div>
           </div >
