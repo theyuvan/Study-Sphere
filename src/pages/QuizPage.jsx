@@ -3,6 +3,7 @@ import { Dialog, DialogActionsBar } from '@progress/kendo-react-dialogs'
 import { Button as KendoButton } from '@progress/kendo-react-buttons'
 import { Notification, NotificationGroup } from '@progress/kendo-react-notification'
 import { Grid, GridColumn } from '@progress/kendo-react-grid'
+import { RadioGroup } from '@progress/kendo-react-inputs'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/Card'
 import Button from '../components/ui/Button'
 import { Input } from '../components/ui/Input'
@@ -427,19 +428,22 @@ const QuizPage = () => {
                   <h3 className="text-xl font-black text-black mb-6">{currentQuestion?.question}</h3>
                   
                   <div className="space-y-3">
-                    {currentQuestion?.options.map((option, index) => (
-                      <label key={index} className="flex items-center p-4 bg-white rounded-xl border-2 border-gray-200 hover:border-blue-300 cursor-pointer transition-colors">
-                        <input
-                          type="radio"
-                          name={`question-${currentQuestion.id}`}
-                          value={index}
-                          checked={selectedAnswers[currentQuestion.id] === index}
-                          onChange={() => selectAnswer(currentQuestion.id, index)}
-                          className="mr-3 h-4 w-4"
-                        />
-                        <span className="font-medium">{option}</span>
-                      </label>
-                    ))}
+                    <RadioGroup
+                      data={currentQuestion?.options.map((option, index) => ({ 
+                        label: option, 
+                        value: index 
+                      }))}
+                      value={selectedAnswers[currentQuestion.id]}
+                      onChange={(e) => selectAnswer(currentQuestion.id, e.target.value)}
+                      layout="vertical"
+                      className="space-y-3"
+                      itemRender={(element, item) => (
+                        <div className="flex items-center p-4 bg-white rounded-xl border-2 border-gray-200 hover:border-blue-300 cursor-pointer transition-colors">
+                          {element}
+                          <span className="ml-3 font-medium">{item.label}</span>
+                        </div>
+                      )}
+                    />
                   </div>
                 </div>
 

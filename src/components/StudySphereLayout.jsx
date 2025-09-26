@@ -9,9 +9,9 @@ const StudySphereLayout = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <div className="h-screen w-screen bg-gradient-to-br from-purple-50 to-blue-50 overflow-hidden">
+    <div className="h-screen w-screen bg-gradient-to-br from-purple-50 to-blue-50 overflow-hidden p-2">
       {/* Glassmorphic container - Full Screen */}
-      <div className="h-full w-full backdrop-blur-xl bg-white/30 border-4 border-black m-2 rounded-3xl shadow-brutal flex flex-col">
+      <div className="h-full w-full backdrop-blur-xl bg-white/30 border-4 border-black rounded-3xl shadow-brutal flex flex-col">
         {/* Header */}
         <header className="border-b-4 border-black p-4 sm:p-6 bg-white/40 backdrop-blur-md flex-shrink-0">
           <div className="flex justify-between items-center gap-4">
