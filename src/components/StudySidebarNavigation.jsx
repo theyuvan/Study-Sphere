@@ -31,12 +31,6 @@ const StudySidebarNavigation = () => {
 
   return (
     <div className="h-full bg-white/40 backdrop-blur-md flex flex-col border-r-4 border-black">
-      {/* Header */}
-      <div className="p-6 border-b-4 border-black flex-shrink-0">
-        <h2 className="text-2xl font-black text-black">STUDYSPHERE</h2>
-        <p className="text-sm font-medium text-gray-600 mt-1">Smart Learning Platform</p>
-      </div>
-
       {/* Navigation - Scrollable area */}
       <div className="flex-1 overflow-y-auto p-4">
         <nav className="space-y-2 mb-8">

@@ -42,12 +42,8 @@ const StudyMobileNavigation = ({ isOpen, onClose }) => {
       
       {/* Mobile Menu */}
       <div className="fixed inset-y-0 right-0 w-80 max-w-[85vw] bg-white/90 backdrop-blur-md border-l-4 border-black flex flex-col">
-        {/* Header */}
-        <div className="flex items-center justify-between p-6 border-b-4 border-black flex-shrink-0">
-          <div>
-            <h2 className="text-2xl font-black text-black">STUDYSPHERE</h2>
-            <p className="text-sm font-medium text-gray-600 mt-1">Smart Learning Platform</p>
-          </div>
+        {/* Close Button */}
+        <div className="flex justify-end p-4 border-b-4 border-black flex-shrink-0">
           <Button
             variant="outline"
             className="rounded-xl p-2"
