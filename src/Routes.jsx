@@ -5,6 +5,7 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import NotFound from "./pages/NotFound";
 import StudySphereLayout from './components/StudySphereLayout';
 import StudyDashboard from './pages/StudyDashboard';
+import LibraryPage from './pages/LibraryPage';
 import UploadPage from './pages/UploadPage';
 import SearchPage from './pages/SearchPage';
 import QuizPage from './pages/QuizPage';
@@ -13,7 +14,7 @@ import ProgressPage from './pages/ProgressPage';
 import LeaderboardPage from './pages/LeaderboardPage';
 
 // Placeholder component for library
-const LibraryPage = () => <div className="p-8"><h2 className="text-2xl font-black">Library - Coming Soon</h2></div>;
+// const LibraryPage = () => <div className="p-8"><h2 className="text-2xl font-black">Library - Coming Soon</h2></div>;
 
 const Routes = () => {
   return (
