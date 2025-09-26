@@ -32,13 +32,13 @@ const StudySidebarNavigation = () => {
   return (
     <div className="h-full bg-white/40 backdrop-blur-md flex flex-col border-r-4 border-black">
       {/* Header */}
-      <div className="p-6 border-b-4 border-black">
+      <div className="p-6 border-b-4 border-black flex-shrink-0">
         <h2 className="text-2xl font-black text-black">STUDYSPHERE</h2>
         <p className="text-sm font-medium text-gray-600 mt-1">Smart Learning Platform</p>
       </div>
 
-      {/* Navigation */}
-      <div className="flex-1 overflow-auto p-4">
+      {/* Navigation - Scrollable area */}
+      <div className="flex-1 overflow-y-auto p-4">
         <nav className="space-y-2 mb-8">
           {navigationItems.map((item) => {
             const Icon = item.icon
@@ -54,7 +54,7 @@ const StudySidebarNavigation = () => {
                     : "hover:bg-black/10 text-black"
                 )}
               >
-                <Icon className="h-5 w-5" />
+                <Icon className="h-5 w-5 flex-shrink-0" />
                 {item.name}
               </Link>
             )
@@ -81,8 +81,8 @@ const StudySidebarNavigation = () => {
         </div>
       </div>
 
-      {/* Footer */}
-      <div className="p-4 border-t-4 border-black">
+      {/* Footer - Fixed at bottom */}
+      <div className="p-4 border-t-4 border-black flex-shrink-0">
         <div className="grid grid-cols-2 gap-2">
           <Button className="rounded-xl font-bold">
             Study Now
