@@ -3,6 +3,8 @@ import { BrowserRouter, Routes as RouterRoutes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import ErrorBoundary from "./components/ErrorBoundary";
 import NotFound from "./pages/NotFound";
+import LandingLayout from './components/LandingLayout';
+import LandingPage from './pages/LandingPage';
 import StudySphereLayout from './components/StudySphereLayout';
 import StudyDashboard from './pages/StudyDashboard';
 import LibraryPage from './pages/LibraryPage';
@@ -13,18 +15,21 @@ import SchedulePage from './pages/SchedulePage';
 import ProgressPage from './pages/ProgressPage';
 import LeaderboardPage from './pages/LeaderboardPage';
 
-// Placeholder component for library
-// const LibraryPage = () => <div className="p-8"><h2 className="text-2xl font-black">Library - Coming Soon</h2></div>;
-
 const Routes = () => {
   return (
     <BrowserRouter>
       <ErrorBoundary>
         <ScrollToTop />
         <RouterRoutes>
+          {/* Landing Page Routes */}
+          <Route path="/" element={<LandingLayout />}>
+            <Route index element={<LandingPage />} />
+          </Route>
+
           {/* StudySphere App Routes with Layout */}
-          <Route path="/" element={<StudySphereLayout />}>
+          <Route path="/app" element={<StudySphereLayout />}>
             <Route index element={<StudyDashboard />} />
+            <Route path="dashboard" element={<StudyDashboard />} />
             <Route path="library" element={<LibraryPage />} />
             <Route path="upload" element={<UploadPage />} />
             <Route path="search" element={<SearchPage />} />
@@ -33,6 +38,7 @@ const Routes = () => {
             <Route path="progress" element={<ProgressPage />} />
             <Route path="leaderboard" element={<LeaderboardPage />} />
           </Route>
+          
           <Route path="*" element={<NotFound />} />
         </RouterRoutes>
       </ErrorBoundary>
