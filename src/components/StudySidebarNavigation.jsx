@@ -22,7 +22,6 @@ const navigationItems = [
   { name: 'Search', href: '/search', icon: Search },
   { name: 'Quiz', href: '/quiz', icon: Brain },
   { name: 'Schedule', href: '/schedule', icon: Calendar },
-  { name: 'Progress', href: '/progress', icon: BarChart3 },
   { name: 'Leaderboard', href: '/leaderboard', icon: Trophy },
 ]
 
