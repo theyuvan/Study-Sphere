@@ -14,13 +14,13 @@ import {
 } from 'lucide-react'
 
 const navigationItems = [
-  { name: 'Dashboard', href: '/', icon: Home },
-  { name: 'Library', href: '/library', icon: BookOpen },
-  { name: 'Upload', href: '/upload', icon: Upload },
-  { name: 'Search', href: '/search', icon: Search },
-  { name: 'Quiz', href: '/quiz', icon: Brain },
-  { name: 'Schedule', href: '/schedule', icon: Calendar },
-  { name: 'Leaderboard', href: '/leaderboard', icon: Trophy },
+  { name: 'Dashboard', href: '/app', icon: Home },
+  { name: 'Library', href: '/app/library', icon: BookOpen },
+  { name: 'Upload', href: '/app/upload', icon: Upload },
+  { name: 'Search', href: '/app/search', icon: Search },
+  { name: 'Quiz', href: '/app/quiz', icon: Brain },
+  { name: 'Schedule', href: '/app/schedule', icon: Calendar },
+  { name: 'Leaderboard', href: '/app/leaderboard', icon: Trophy },
 ]
 
 const StudySphereLayout = () => {
